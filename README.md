@@ -79,8 +79,6 @@ npm run package
 The command creates a `.vsix` package that can be installed from VS Code with
 **Extensions: Install from VSIX...**.
 
-For Marketplace publishing steps, see [PUBLISHING.md](PUBLISHING.md).
-
 ## Contributing
 
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md)

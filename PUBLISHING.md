@@ -1,6 +1,12 @@
-# Publishing
+# Publishing Notes
 
-This project is configured for this Marketplace identity:
+This file is for maintainers only. Contributors do not need Marketplace
+publisher access to build, test, or submit changes.
+
+For normal project setup, see [README.md](README.md) and
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
+The project is configured for this Marketplace identity:
 
 - Publisher ID: `zmrfzn`
 - Publisher display name: `Zameer Fouzan`
@@ -13,9 +19,8 @@ profile and the `author` field.
 ## Official Links
 
 - VS Code publishing guide: https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+- Get a personal access token: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token
 - Publisher management page: https://marketplace.visualstudio.com/manage/publishers/
-- Azure DevOps portal: https://dev.azure.com/
-- Azure DevOps personal access token docs: https://learn.microsoft.com/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate
 
 ## Create The Publisher
 
@@ -29,10 +34,11 @@ The publisher ID is permanent once created, so confirm it before publishing.
 
 ## Create A Personal Access Token
 
-1. Open https://dev.azure.com/
-2. Go to **User settings** > **Personal access tokens**.
-3. Create a token with **Marketplace: Manage** scope.
-4. Copy it immediately. Azure DevOps will only show it once.
+Follow the official VS Code publishing instructions:
+
+https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token
+
+Use a token with the Marketplace management scope described in that section.
 
 ## Login And Publish
 
@@ -43,6 +49,7 @@ npx vsce login zmrfzn
 npm run compile
 npm run lint
 npm run test:unit
+npm run test:integration
 npm run package
 ```
 

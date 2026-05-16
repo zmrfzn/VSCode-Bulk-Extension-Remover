@@ -1,0 +1,379 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background:
+    radial-gradient(circle at top right, rgba(255, 154, 0, 0.16), transparent 35%),
+    linear-gradient(180deg, color-mix(in srgb, var(--bg) 90%, black 10%), var(--bg));
+  color: var(--text);
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+  padding: 14px;
+}
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  min-height: 0;
+}
+
+.hero,
+.panel {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hero {
+  flex: 0 0 auto;
+  padding: 14px;
+  background:
+    linear-gradient(135deg, var(--panel-strong), color-mix(in srgb, var(--panel) 86%, #000 14%));
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 1.1;
+  margin: 0 0 6px;
+}
+
+.subtle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.primary {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+button.primary:hover {
+  background: var(--accent-hover);
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button.danger {
+  background: var(--danger);
+  color: white;
+}
+
+button.danger:hover {
+  background: var(--danger-hover);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+input[type="search"] {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  padding: 10px 12px;
+  outline: none;
+}
+
+.panel {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--panel) 97%, #111 3%);
+}
+
+.toolbar,
+.status {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.status {
+  border-bottom: 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  background: linear-gradient(180deg, var(--panel-soft), var(--panel));
+  flex: 0 0 auto;
+}
+
+.statusStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statusActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.toolbarRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toolbarRow.searchRow {
+  flex-wrap: nowrap;
+}
+
+.toolbarRow.actionsRow {
+  justify-content: space-between;
+}
+
+.toolbarRow.actionsRow > button,
+.toolbarRow.actionsRow > .counter {
+  flex: 0 0 auto;
+}
+
+.counter {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--chip);
+  color: var(--chip-text);
+}
+
+.list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--panel) 98%, #fff 2%);
+}
+
+.item:first-child {
+  border-top: 0;
+}
+
+.item:hover {
+  background: var(--item-hover);
+}
+
+.item.protected {
+  background: color-mix(in srgb, var(--panel-soft) 88%, #f59e0b 12%);
+}
+
+.meta {
+  min-width: 0;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rowActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.badge {
+  border: 1px solid color-mix(in srgb, var(--border) 70%, #f59e0b 30%);
+  border-radius: 999px;
+  color: color-mix(in srgb, var(--text) 84%, #f59e0b 16%);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 3px 7px;
+  text-transform: uppercase;
+}
+
+.protectButton {
+  font-size: 11px;
+  padding: 6px 8px;
+}
+
+.infoIcon {
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: help;
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.id,
+.description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.empty {
+  padding: 20px 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.progress {
+  min-height: 18px;
+  line-height: 1.45;
+}
+
+.sectionTitle {
+  padding: 10px 14px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--panel) 96%, #000 4%);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sectionAction {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 7px 10px;
+}
+
+.pendingItem {
+  padding: 12px 14px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: color-mix(in srgb, var(--panel-soft) 92%, #000 8%);
+}
+
+.pendingName {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.pendingMeta {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.buttonIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.searchInput {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.refreshButton {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.dryRunControl {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.dryRunControl,
+#retryFailed,
+#remove {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 390px) {
+  body {
+    padding: 10px;
+  }
+
+  .shell {
+    gap: 10px;
+  }
+
+  .hero,
+  .toolbar,
+  .status,
+  .item,
+  .pendingItem {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 {
+    font-size: 19px;
+  }
+
+  button {
+    gap: 6px;
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .counter {
+    margin-left: 0;
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .sectionAction {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}

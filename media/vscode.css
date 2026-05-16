@@ -1,0 +1,18 @@
+:root {
+  color-scheme: light dark;
+  --bg: var(--vscode-sideBar-background);
+  --panel: color-mix(in srgb, var(--vscode-editor-background) 96%, #000 4%);
+  --panel-strong: color-mix(in srgb, var(--vscode-editor-background) 92%, #d97706 8%);
+  --panel-soft: color-mix(in srgb, var(--vscode-editor-background) 94%, #14532d 6%);
+  --border: var(--vscode-panel-border);
+  --text: var(--vscode-foreground);
+  --muted: var(--vscode-descriptionForeground);
+  --accent: var(--vscode-button-background);
+  --accent-text: var(--vscode-button-foreground);
+  --accent-hover: var(--vscode-button-hoverBackground);
+  --chip: color-mix(in srgb, var(--vscode-editor-background) 82%, #b45309 18%);
+  --chip-text: var(--text);
+  --item-hover: color-mix(in srgb, var(--vscode-editor-background) 84%, #0f766e 16%);
+  --danger: #b43c2f;
+  --danger-hover: #d55344;
+}

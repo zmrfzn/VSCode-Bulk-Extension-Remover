@@ -1,0 +1,91 @@
+{
+  "name": "vscode-bulk-extension-remover",
+  "displayName": "Bulk Extension Remover",
+  "description": "Bulk uninstall Visual Studio Code extensions with dry runs and protected-extension guardrails.",
+  "version": "0.1.0",
+  "publisher": "zmrfzn",
+  "author": {
+    "name": "Zameer Fouzan",
+    "email": "zmrfzn@gmail.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover/issues"
+  },
+  "homepage": "https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover#readme",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "extensions",
+    "bulk",
+    "uninstall",
+    "cleanup"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "activationEvents": [
+    "onView:bulkExtensionRemove.view",
+    "onCommand:bulkExtensionRemove.focus"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src",
+    "pretest": "npm run compile && npm run lint",
+    "test": "npm run test:unit",
+    "test:unit": "mocha --ui tdd \"out/test/unit/**/*.test.js\"",
+    "test:integration": "node ./out/test/integration/runTest.js",
+    "package": "vsce package"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "bulkExtensionRemove.focus",
+        "title": "Bulk Extension Remover: Open Panel"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "bulkExtensionRemove",
+          "title": "Bulk Extension Remover",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "bulkExtensionRemove": [
+        {
+          "id": "bulkExtensionRemove.view",
+          "name": "Installed Extensions",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.93.0",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.3.2",
+    "eslint": "^9.27.0",
+    "mocha": "^11.2.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
+  }
+}

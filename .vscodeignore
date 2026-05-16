@@ -1,0 +1,17 @@
+.gitignore
+.vscode/**
+.github/**
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+PUBLISHING.md
+SECURITY.md
+src/**
+test/**
+.vscode-test/**
+node_modules/**
+out/test/**
+out/**/*.map
+*.vsix
+tsconfig.json
+eslint.config.mjs
+package-lock.json

@@ -1,5 +1,7 @@
 # Bulk Extension Remover
 
+[![CI](https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover/actions/workflows/ci.yml)
+
 Bulk cleanup for installed Visual Studio Code extensions, with dry-run previews
 and protected-extension guardrails.
 

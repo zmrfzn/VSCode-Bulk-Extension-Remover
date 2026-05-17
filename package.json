@@ -17,6 +17,7 @@
     "url": "https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover/issues"
   },
   "homepage": "https://github.com/zmrfzn/VSCode-Bulk-Extension-Remover#readme",
+  "icon": "media/icon-stack-128.png",
   "engines": {
     "vscode": "^1.93.0"
   },

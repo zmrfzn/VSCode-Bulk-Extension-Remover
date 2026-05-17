@@ -2,7 +2,7 @@
   "name": "vscode-bulk-extension-remover",
   "displayName": "Bulk Extension Remover",
   "description": "Bulk uninstall Visual Studio Code extensions with dry runs and protected-extension guardrails.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "zmrfzn",
   "author": {
     "name": "Zameer Fouzan",

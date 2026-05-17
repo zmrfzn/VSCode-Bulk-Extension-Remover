@@ -5,6 +5,12 @@
 Bulk cleanup for installed Visual Studio Code extensions, with dry-run previews
 and protected-extension guardrails.
 
+## Preview
+
+![Bulk Extension Remover screenshot showing filtering, protected extensions, and uninstall controls](media/preview.png)
+
+![Bulk Extension Remover demo GIF showing search, selection, dry run, and uninstall flow](media/preview-gif.gif)
+
 ## Features
 
 - Lists installed, non-built-in extensions.

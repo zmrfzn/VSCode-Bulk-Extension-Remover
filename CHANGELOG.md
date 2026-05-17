@@ -4,6 +4,7 @@
 
 ### Changed
 
+- Added README preview assets for GitHub and Marketplace rendering.
 - Reworked the extension into a Microsoft-style TypeScript layout with `src/`
   source files and generated `out/` JavaScript.
 - Split activation, webview provider, domain logic, message contracts, and
